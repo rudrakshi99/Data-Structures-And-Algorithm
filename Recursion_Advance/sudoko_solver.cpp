@@ -21,6 +21,7 @@ bool is_valid(int mat[][9], int i, int j, int n, int num){
       			return false;
       	}
       }
+      return true;
 }
 bool sudokosolver(int mat[][9],int i, int j, int n){
 	if(i==n){
