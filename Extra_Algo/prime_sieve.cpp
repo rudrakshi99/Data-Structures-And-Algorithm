@@ -47,14 +47,12 @@ int main()
 	int t;
 	cin>>t;
 	
-	prime_seive(n);
-
+	
 while(t--){
 	int n;
 
 	cin >> n;
-
-	cout<<ans[n-1]<<endl;	
+    prime_seive(n);	
 }
 	return 0;
 }
