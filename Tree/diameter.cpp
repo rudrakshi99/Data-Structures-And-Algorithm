@@ -60,9 +60,32 @@ int diameter(node* root){
 
 }
 
+//time complexity O(n)
+pair<int, int> HeiDia(node* root){
+	pair<int, int> p;
 
+	if(root == NULL){
+		p.first = 0;
+		p.second = 0;
+
+		return p;
+	}
+
+	pair<int, int> left_child = HeiDia(root->left);
+
+	pair<int, int> right_child = HeiDia(root->right);
+
+    p.first = max(left_child.first, right_child.first) + 1;  //height
+
+    p.second = max((left_child.first + right_child.first) ,max(left_child.second, right_child.second)); //diameter
+    
+    return p;
+}
 int main(){
 	node* root = CreateTree();
 	cout << diameter(root);
+	cout <<"\n";
+	pair<int, int> p = HeiDia(root);
+	cout<<"height= "<<p.first<<" "<<"diameter= "<<p.second;
 	return 0;
 }
