@@ -60,9 +60,38 @@ node* Level_order_input(){
    return root;
 }
 
+void Level_order_output(node* root){
+	queue<node*> q;
+	q.push(root);
+	q.push(NULL);
+
+	while(!q.empty()){
+		node* temp = q.front();
+		q.pop();
+
+		cout << temp->data<<" ";
+
+		if(temp->left){
+			q.push(temp->left);
+		}
+		if(temp->right){
+			q.push(temp->right);
+		}
+		if(q.front()==NULL){
+			cout<<"\n";
+
+			q.pop();
+
+			if(!q.empty()){
+				q.push(NULL);
+			}
+		}
+	}
+}
+
 int main(){
 
 	node* root = Level_order_input();
-		in_order(root);
+	Level_order_output(root);
 	return 0;
 }
