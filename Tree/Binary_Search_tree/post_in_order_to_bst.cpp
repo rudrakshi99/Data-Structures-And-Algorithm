@@ -105,9 +105,9 @@ int ind = 5;
 int main(){
 
 	int pre[] = {8,4,1,5,3,7};
-	int in[]={1,4,5,8,3,7};
+	int in[] = {1,4,5,8,3,7};
 	int post[] = {1,5,4,7,3,8};
-	node* root = post_in(pre, in, 0, 5);
+	node* root = post_in(post, in, 0, 5);
 	Level_order_output(root);
 	return 0;
 }
