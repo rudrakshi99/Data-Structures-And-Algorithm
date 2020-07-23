@@ -45,8 +45,8 @@ void in_order(node* root){
 	if(root == NULL)
 		return;
 
-	cout << root->data <<" ";
-	in_order(root-> left);
+	in_order(root->left);
+	cout<<root->data<<" ";
 	in_order(root->right);
 }
 void post_order(node* root){
@@ -59,11 +59,11 @@ void post_order(node* root){
 }
 
 
-
 int main(){
 	node* root = CreateTree();
 	pre_order(root);
 	in_order(root);
 	post_order(root);
+	
 	return 0;
 }
