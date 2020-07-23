@@ -46,14 +46,9 @@ node* Create_BST(){
 	return root;
 }
 
-	
-
-
-
-
 
 int main(){
 
-	
+	node* root = Create_BST();
 	return 0;
 }
