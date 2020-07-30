@@ -48,7 +48,31 @@ int topdown(int price[],int weigth[],int n,int capacity,int dp[][100]){
 
 }
 
+int bottom_up(int price[], int weight[],int n, int capacity){
 
+	int dp[100][100] = {0};
+
+	for(int items = 0; items<=n;items++){
+		for(int wei = 0; wei<=capacity;wei++){
+			if(items==0 || wei == 0){
+				dp[items][wei] = 0;
+			}
+			else{
+
+				int inc = 0, exc = 0;
+				if(wei >= weight[items-1]){
+					inc = price[items-1] + dp[items-1][wei-weight[items-1]];
+
+				}
+				exc = 0 + dp[items-1][wei];
+
+				dp[items][wei] = max(inc, exc);
+			}
+		}
+	}
+
+  return dp[n][capacity];
+}
 
 int main()
 {
@@ -67,6 +91,7 @@ for(int i=0;i<100;i++){
 
 	int n = 4; //no.of elements
 	cout<<maxprofit(price,weigth,n,capacity)<<endl;
-	cout<<topdown(price,weigth,n,capacity,dp);
+	cout<<topdown(price,weigth,n,capacity,dp)<<endl;
+	cout<<bottom_up(price,weigth,n,capacity);
 	return 0;
 }
