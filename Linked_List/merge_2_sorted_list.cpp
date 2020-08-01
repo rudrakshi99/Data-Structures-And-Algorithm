@@ -54,7 +54,6 @@ public:
 		}
 		return sptr->data;
 	}
-	
 	void print(){
 		node* temp = head;
 		while(temp!=NULL){
