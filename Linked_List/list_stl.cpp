@@ -1,5 +1,5 @@
 #include <iostream>
-#include<list>
+#include<list> // implimentation of doubly linked
 using namespace std;
 
 int main(){
