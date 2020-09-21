@@ -16,6 +16,7 @@ int main(){
   //input all elements
 
   while(d!=-1){
+     cin >> d;
      
     if(leftheap.size()>rightheap.size()){
        if(d<med){
@@ -57,7 +58,7 @@ int main(){
 
 
      cout<<"Med "<<med << endl;
-     cin >> d;
+    
   }
 
 
