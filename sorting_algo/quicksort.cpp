@@ -1,5 +1,20 @@
 #include <iostream>
+#include<cstdlib>
 using namespace std;
+
+void shuffle(int *a, int s, int e){  // for randomise quick sort - applied on sorted array 
+	// convert worst case O(N^2) to O(N Log N)
+   
+   srand(time(NULL)); // giving the seed 
+
+   int i,j, temp;
+   for(int i=e;i>0;i--){
+        
+        j = rand()%(i+1); // create one random index
+        swap(a[j],a[i]);
+   }
+
+}
 
 int partition(int *a, int s, int e){
 
