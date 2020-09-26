@@ -74,30 +74,30 @@ void Level_order_output(node* root){
 	}
 }
 
-int search(int in[], int s, int e, int data){
+int search(int in[], int s, int e, int data){ // linear search
 	for(int i=s; i<=e;i++){
 		if(in[i]==data){
 			return i;
 		}
 	}
 }
-int ind = 0;
- node* pre_in(int pre[], int in[], int s, int e){
+int ind = 0; //global 
+ node* pre_in(int *pre, int *in, int s, int e){
  	if(s>e){
  		return NULL;
  	}
-    node* root = new node(pre[ind]);
+    node* root = new node(pre[ind]); // pick each node from preorder arr
         ind++;
 
     if(s==e)// only one element
     	return root;
 
     
-    int ind1 = search(in, s,e,root->data);
+    int ind1 = search(in, s,e,root->data); //search for index in inorder arr
 
-    root->left = pre_in(pre, in,s, ind1-1);
-    root->right = pre_in(pre, in, ind1+1,e);
-
+    root->left = pre_in(pre, in,s, ind1-1); // all element left of ind1 will form left subtree
+    root->right = pre_in(pre, in, ind1+1,e);  // all element right of ind1 will form right subtree
+  
     return root;
 
  }

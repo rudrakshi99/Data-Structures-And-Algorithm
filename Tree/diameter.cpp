@@ -1,3 +1,4 @@
+// longest distance between to nodes
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -33,7 +34,7 @@ node* CreateTree(){
 
 }
 
-int height(node* root){
+int height(node* root){ //-o(n)
 	if(root == NULL)
 		return 0;
 
@@ -46,7 +47,7 @@ int height(node* root){
 }
 
 // time complexity O(n^2)
-int diameter(node* root){
+int diameter(node* root){ //- preoreder treaversal
 	if(root == NULL)
 		return 0;
 
