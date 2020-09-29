@@ -1,3 +1,6 @@
+// not for cycle graph as it has dependensies
+// applied for directed acyclic graph 
+//start with the node which has no dependency - indegree = 0
 #include<iostream>
 #include<map>
 #include<list>
