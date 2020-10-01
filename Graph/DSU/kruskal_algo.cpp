@@ -88,7 +88,7 @@ public:
           //take that edge in MST if it doesn't form a cycle
 
           if(s.findset(x)!=s.findset(y)){
-             s.union_set+(x,y);
+             s.union_set(x,y);
              ans += w;
           }
    	   }
