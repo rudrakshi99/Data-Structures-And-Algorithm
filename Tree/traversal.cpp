@@ -61,8 +61,13 @@ void post_order(node* root){
 
 int main(){
 	node* root = CreateTree();
+	cout<<"pre order-";
 	pre_order(root);
+	cout<<"\n";
+	cout<<"in order-";
 	in_order(root);
+	cout<<"\n";
+	cout<<"post order";
 	post_order(root);
 	
 	return 0;

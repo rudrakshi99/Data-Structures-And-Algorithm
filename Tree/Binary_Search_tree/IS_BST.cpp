@@ -52,7 +52,7 @@ bool is_bst(node* root, int mini=INT_MIN, int maxi=INT_MAX){
 	if(root == NULL)
 		return true;
 
-	if((root->data >=mini && root->data <= maxi ) && is_bst(root->left,mini,root->data) && is_bst(root->right,root->data, maxi)) //check root, left, right
+	if((root->data >=mini && root->data <= maxi ) && is_bst(root->left,mini,root->data) && is_bst(root->right,root->data, maxi)) //check root, (left, right)
        return true;
    else
    	 return false;
