@@ -10,7 +10,7 @@ vector<int> mergeksortedArrays(vector<vector<int> > arr){
       vector<int> result;
       priority_queue<node, vector<node>, greater<node> > pq; //min heap
       
-     //insert the 0th element of every array in the pq
+     //insert the 0th element of every array in the pq - means pushing first k elements
       for(int i=0;i<arr.size();i++){
            pq.push({arr[i][0],{i,0}}); // push(value, (array_idx, element_idx))
       }
