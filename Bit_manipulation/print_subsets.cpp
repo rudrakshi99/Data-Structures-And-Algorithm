@@ -9,7 +9,7 @@ void subset(char c[]){
   for(int mask=0;mask<tot;mask++){
   	for(int i=0;i<l;i++){
   		int f = 1<<i; 
-  		if(mask & f){
+  		if(mask & f){ //setbit
   			cout << c[i];
   		}
   	}
