@@ -9,6 +9,9 @@ void keypad(char a[], int i,char output[], int j ){
 		return;
 	}
 	int digit = a[i]-'0';// converting into int
+	if(digit==1 || digit==0){ //contain null str
+	      keypad(a, i+1, output,j); //move to next
+	}
     for(int index=0; key[digit][index]!='\0';index++){
     	output[j]=key[digit][index];
     	keypad(a, i+1, output,j+1);
