@@ -33,7 +33,7 @@ vector<vector<ll> > multiply(vector<vector<ll> > A, vector<vector<ll> > B) {
 	//logic to multiply matrices
 	for (int i = 1; i <= k; i++) {
 		for (int j = 1; j <= k; j++) {
-			for (int x = i; x < k; x++) {
+			for (int x = 1; x < k; x++) {
 				C[i][j] = (C[i][j] + (A[i][x] * B[x][j]) % MOD) % MOD;
 
 			}
