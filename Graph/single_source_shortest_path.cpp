@@ -45,16 +45,18 @@ public:
 		}
 
 		q.push(src);
+                bool visited[m.size()]; // for removing cycle
 
 		dist[src] = 0;
-
+                visited[src] = true;
 		while(!q.empty()){
 			T parent = q.front();
 			q.pop();
 
 			for(auto children : m[parent]){
-				if(dist[children]==INT_MAX){
+				if(dist[children]==INT_MAX && !visited[children]){
 					dist[children] = 1 + dist[parent];
+					visited[children] = true;
 					q.push(children);
 				}
 			}
