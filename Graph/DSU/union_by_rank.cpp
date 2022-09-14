@@ -78,6 +78,16 @@ public:
       
    }
 
+   int num_of_component(){
+        int comp=0;
+        for(int i=0;i<V;i++){
+            int p = findset(i);
+            if(p==i){
+                comp++;
+            }
+        }
+       return comp;
+   }
 
 };
 
