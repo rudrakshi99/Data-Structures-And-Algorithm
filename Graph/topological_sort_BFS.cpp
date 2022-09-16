@@ -47,6 +47,8 @@ public:
     			q.push(i);  // for starting
     		}
     	}
+	int c=0; //to detect cycle
+	c = q.size() // take size to get no. of nodes of indegree 0
     	// start removing elements from the queue
     	while(!q.empty()){
     		int node = q.front();
@@ -58,10 +60,16 @@ public:
     			indegree[nbr]--;
     			if(indegree[nbr]==0){
     				q.push(nbr);
+				c++; // increase to count 0 indegree nodes
     			}
     		}
     	}
-
+        
+	if(c==V){
+	   cout<<"No cycle present";
+	}else{
+           cout<<"Cycle is present";
+	}
     }
 };
 
