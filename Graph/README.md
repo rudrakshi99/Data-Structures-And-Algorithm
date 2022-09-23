@@ -1,5 +1,11 @@
 # Graph Theory
 
+## Walk
+Any random traversal in graph. (V+E can be repeated)
+
+## Trail 
+A walk in which no edge is repeated. (V can be repeated)
+
 ## Eulerian path and circuit 
 
 ### Eulerian path:
