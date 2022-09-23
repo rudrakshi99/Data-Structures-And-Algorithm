@@ -13,7 +13,8 @@ Eulerian Path is a path in graph that visits every edge exactly once.
 
 ### Eulerian Circuit:
  
-Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex. 
+Eulerian Circuit is an Eulerian Path which starts and ends on the same vertex. All the vertices with non-zro degree are connected in a component. Rest all vertices must have 0-degree.
+
 
 **1. Undircted Graph**
 
