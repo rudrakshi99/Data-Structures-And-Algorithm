@@ -1,5 +1,6 @@
 // rank - nunber of nodes connected along with it (size of set)
 // attach smaller tree to bigger tree
+// O(log n)- union by rank
 // o(1) - applying both path compression and union by rank
 
 #include<iostream>
