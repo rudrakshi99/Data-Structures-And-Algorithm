@@ -54,3 +54,26 @@
 	eg: 5: 00000000000000000000000000000101
 	 5>>1: 00000000000000000000000000000010 = 2 = 5/2
 	 5>>2: 00000000000000000000000000000001 = 1 = 5/(2*2)
+
+### Most important in-built methods
+```cpp
+	1. __builtin_popcount(num) // The number of set bits
+	2. __builtin_parity(num) // The parity(even or odd) of the number of ones 
+	3. __builtin_clz(num) // Number of zeroes at the beginning of a number
+	4. __builtin_ctz(num) // Number of zeroes at the end of a number
+````
+	eg: 10: 00000000000000000000000000001010
+	__builtin_popcount(10): 2
+	__builtin_parity(10):   0 
+	__builtin_clz(10):     28
+	__builtin_ctz(10):      1
+`````
+
+ All these methods are also present for long long type
+	
+	Append ll to all the methods:
+	1. __builtin_popcountll(num) 
+	2. __builtin_parityll(num) 
+	3. __builtin_clzll(num) 
+	4. __builtin_ctzll(num) 
+	
