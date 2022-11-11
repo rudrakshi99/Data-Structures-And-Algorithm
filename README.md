@@ -11,6 +11,7 @@ Algorithms and data structures are fundamental to efficient code and good softwa
 | 2D-Array             | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/2-D%20Array)             |
 | String               | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/String)                  |
 | Sorting              | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/sorting_algo)            |
+| Binary Search        | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/Binary_Search)
 | Number Theory        | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/Number_theory)           |
 | OOPs                 | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/class)                   |
 | Recursion            | [Link](https://github.com/rudrakshi99/Data-Structures-And-Algorithm/tree/master/Recursion)               |
