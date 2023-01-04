@@ -19,8 +19,8 @@ public:
    void addEdge(int u, int v){
       l.push_back(make_pair(u,v));
    }
-    // Find
-
+	
+    // Find -> O(1)
    int findset(int i, int parent[]){
          //base case
    	    if(parent[i]==-1){ // node is parent of itself
@@ -30,7 +30,8 @@ public:
    	    return parent[i]= findset(parent[i],parent); /**********path compression optimisation*************/ 
    }
 
-   //unoin by rank
+	//O(Log(N))	
+   //unoin by size and and initialize rank arr by 1
    void union_set(int x,int y, int parent[], int rank[]){
        int s1 = findset(x,parent); // x present in s1 set
        int s2 = findset(y,parent); // y present in s2 set
@@ -38,7 +39,7 @@ public:
        if(s1!=s2){
        	   if(rank[s1]<rank[s2]){
            parent[s1] = s2; // s2 will be parent of s1
-           rank[s2] = s2 + s1;
+           rank[s2] += rank[s1];
           }
           else{
              parent[s2] = s1;
@@ -46,7 +47,25 @@ public:
           }
        }
    }
+	
+//unoin by rank and initialize rank arr by 0
+//here rank represents height of tree
+   void union_set_by rank(int x,int y, int parent[], int rank[]){
+       int s1 = findset(x,parent); // x present in s1 set
+       int s2 = findset(y,parent); // y present in s2 set
 
+       if(s1!=s2){
+       	   if(rank[s1]>=rank[s2]){
+           parent[s2] = s1; 
+            if(rank[s1]==rank[s2]){
+                rank[s1] = rank[s1]+1;
+            }
+          }
+          else{
+             parent[s1] = s2;
+          }
+       }
+   }
 
    bool contain_cycle(){
       //DSU logic to check if graph contain cycle or not
