@@ -50,7 +50,7 @@ public:
 	
 //unoin by rank and initialize rank arr by 0
 //here rank represents height of tree
-   void union_set_by rank(int x,int y, int parent[], int rank[]){
+   void union_set_by_rank(int x,int y, int parent[], int rank[]){
        int s1 = findset(x,parent); // x present in s1 set
        int s2 = findset(y,parent); // y present in s2 set
 
