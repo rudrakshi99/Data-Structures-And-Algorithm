@@ -15,7 +15,7 @@ int main(){
 
 	for(int i=0;i<n;i++){
 		dp[i]= 1; //every ele can end at length 1
-        for(int j=0;j<i;i++){
+        for(int j=0;j<i;j++){
             if(a[j] < a[i]){
                  dp[i] = max(dp[i],dp[j]+1);
             }
