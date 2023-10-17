@@ -46,7 +46,7 @@ public:
    bool contains_cycle(){
        
        bool *visited = new bool[V];
-       bool *stack = new bool[V];
+       bool *stack = new bool[V]; //order array
         
        for(int i=0;i<V;i++){
           visited[i] = stack[i] = false;
